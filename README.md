@@ -1,1 +1,1 @@
-# collapsed-gibbs-sampling-for-LDA
+# gibbs-sampling-for-LDA

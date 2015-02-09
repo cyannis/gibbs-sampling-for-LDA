@@ -1,0 +1,9 @@
+function L = stdgibbs_logjoint(theta,phi,Adk,Bkw,Mk,...
+        I,D,K,W,di,wi,ci,citest,Id,Iw,Nd,alpha,beta);
+
+% standard gibbs log joint probability over everything (directly from the
+% formula).
+L = K * log(gamma(W * beta)) - K * W * log(gamma(beta)) + ...
+    trace((beta + Bkw - 1)' * log(phi)) + D * log(gamma(K * alpha)) - ...
+        D * K * log(gamma(alpha)) + trace((alpha + Adk - 1)' * log(theta));
+
